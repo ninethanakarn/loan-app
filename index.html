@@ -115,12 +115,53 @@
 
     .wrap {
       width: 100%;
+      max-width: 920px;
+    }
+
+    .wrap > div.card {
       max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     header {
       text-align: center;
       margin-bottom: 28px;
+    }
+
+    .site-brand-block {
+      margin: 0 auto 22px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(43, 143, 212, 0.22);
+      max-width: 420px;
+    }
+
+    body.theme-dark .site-brand-block {
+      border-bottom-color: rgba(56, 189, 248, 0.28);
+    }
+
+    .site-brand-name {
+      margin: 0 0 10px;
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--accent-dark);
+    }
+
+    body.theme-dark .site-brand-name {
+      color: #7dd3fc;
+    }
+
+    .site-brand-slogan {
+      margin: 0;
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: #1e6fa8;
+      line-height: 1.45;
+    }
+
+    body.theme-dark .site-brand-slogan {
+      color: #93c5fd;
     }
 
     header h1 {
@@ -136,6 +177,145 @@
       font-size: 0.95rem;
       color: var(--muted);
       font-weight: 500;
+    }
+
+    .services-section {
+      margin-top: 18px;
+    }
+
+    .services-section-title {
+      margin: 0 0 14px;
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      text-align: center;
+    }
+
+    body.theme-dark .services-section-title {
+      color: var(--accent);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    @media (min-width: 720px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+    }
+
+    .service-card {
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--card);
+      padding: 18px 16px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(30, 100, 160, 0.16);
+      border-color: rgba(43, 143, 212, 0.45);
+    }
+
+    body.theme-dark .service-card:hover {
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+      border-color: rgba(56, 189, 248, 0.45);
+    }
+
+    .service-card-icon {
+      font-size: 1.85rem;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .service-card-title {
+      margin: 0 0 8px;
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .service-card-desc {
+      margin: 0;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .contact-section {
+      margin-top: 18px;
+    }
+
+    .contact-section-title {
+      margin: 0 0 14px;
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      text-align: center;
+    }
+
+    body.theme-dark .contact-section-title {
+      color: var(--accent);
+    }
+
+    .contact-line-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .contact-line-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 420px;
+      padding: 18px 22px;
+      font-family: inherit;
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      background: #06c755;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(6, 199, 85, 0.38);
+      transition: transform 0.18s ease, filter 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .contact-line-btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.06);
+      box-shadow: 0 12px 30px rgba(6, 199, 85, 0.48);
+    }
+
+    .contact-line-btn:active {
+      transform: translateY(0);
+    }
+
+    .input-char-count {
+      margin-top: 5px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    .input-char-count.is-warning {
+      color: #b91c1c;
+    }
+
+    body.theme-dark .input-char-count.is-warning {
+      color: #f87171;
     }
 
     .card {
@@ -1514,6 +1694,10 @@
   </button>
   <div class="wrap">
     <header>
+      <div class="site-brand-block">
+        <p class="site-brand-name">นายธนาคารประจำบ้าน</p>
+        <p class="site-brand-slogan">ปิดหนี้ก่อนยื่นกู้-แก้เคสกู้ไม่ผ่าน</p>
+      </div>
       <h1>เครื่องคำนวณสินเชื่อ</h1>
       <p>ผ่อนคงที่ต่อเดือน (ดอกเบี้ยคงที่ / คำนวณแบบลดต้นลดดอก)</p>
     </header>
@@ -1707,10 +1891,12 @@
           <div class="plan-modal-field">
             <label for="plan-modal-tag">🏷️ Tag</label>
             <input type="text" id="plan-modal-tag" maxlength="30" placeholder="เช่น กสิกร, SCB" />
+            <div class="input-char-count" id="plan-modal-tag-count" aria-live="polite">0 / 30</div>
           </div>
           <div class="plan-modal-field">
             <label for="plan-modal-note">📝 หมายเหตุ</label>
             <textarea id="plan-modal-note" maxlength="200" placeholder="เช่น Promotion 0% 6 เดือน"></textarea>
+            <div class="input-char-count" id="plan-modal-note-count" aria-live="polite">0 / 200</div>
           </div>
           <p class="plan-modal-readonly" id="plan-modal-readonly"></p>
           <div class="plan-modal-actions">
@@ -1812,6 +1998,42 @@
       </div>
     </section>
 
+    <section class="card services-section no-pdf" aria-labelledby="services-heading">
+      <h2 class="services-section-title" id="services-heading">🛠️ บริการของเรา</h2>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-card-icon" aria-hidden="true">🏠</div>
+          <h3 class="service-card-title">ปิดหนี้ก่อนกู้บ้าน</h3>
+          <p class="service-card-desc">ลดภาระหนี้ เพิ่มโอกาสผ่าน</p>
+        </article>
+        <article class="service-card">
+          <div class="service-card-icon" aria-hidden="true">🏢</div>
+          <h3 class="service-card-title">คอนโดลงทุนปล่อยเช่า</h3>
+          <p class="service-card-desc">ทำเลดี มีผู้เช่า</p>
+        </article>
+        <article class="service-card">
+          <div class="service-card-icon" aria-hidden="true">🔑</div>
+          <h3 class="service-card-title">เช่า-เช่าซื้อ / ผ่อนตรง</h3>
+          <p class="service-card-desc">กู้ไม่ผ่านก็มีทางเลือก</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card contact-section no-pdf" aria-labelledby="contact-heading">
+      <h2 class="contact-section-title" id="contact-heading">📞 ติดต่อเรา</h2>
+      <div class="contact-line-wrap">
+        <a
+          class="contact-line-btn"
+          href="https://line.me/R/ti/p/@ninethanakarn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span aria-hidden="true">💬</span>
+          <span>LINE: @ninethanakarn</span>
+        </a>
+      </div>
+    </section>
+
     <footer>
       สูตรผ่อนคงที่: ดอกเบี้ยคิดเป็นรายเดือนจากอัตราต่อปี ÷ 12
     </footer>
@@ -1857,6 +2079,8 @@
       var planModalName = document.getElementById("plan-modal-name");
       var planModalTag = document.getElementById("plan-modal-tag");
       var planModalNote = document.getElementById("plan-modal-note");
+      var planModalTagCount = document.getElementById("plan-modal-tag-count");
+      var planModalNoteCount = document.getElementById("plan-modal-note-count");
       var planModalReadonly = document.getElementById("plan-modal-readonly");
       var planModalCancel = document.getElementById("plan-modal-cancel");
       var planModalSubmit = document.getElementById("plan-modal-submit");
@@ -2218,6 +2442,20 @@
         alert("ส่งออก " + plans.length + " แผนสำเร็จ — ไฟล์: " + filename);
       }
 
+      function updatePlanModalCharCounts() {
+        if (!planModalTag || !planModalNote) return;
+        var tagLen = planModalTag.value.length;
+        var noteLen = planModalNote.value.length;
+        if (planModalTagCount) {
+          planModalTagCount.textContent = tagLen + " / 30";
+          planModalTagCount.classList.toggle("is-warning", tagLen > 24);
+        }
+        if (planModalNoteCount) {
+          planModalNoteCount.textContent = noteLen + " / 200";
+          planModalNoteCount.classList.toggle("is-warning", noteLen > 160);
+        }
+      }
+
       function openPlanModal(config) {
         if (!planModalBackdrop || !planModalForm) return;
         var nameValue = (config && config.name) || "";
@@ -2230,6 +2468,7 @@
         planModalName.value = cleanTextInput(nameValue, 80);
         planModalTag.value = cleanTextInput(tagValue, 30);
         planModalNote.value = cleanTextInput(noteValue, 200);
+        updatePlanModalCharCounts();
         planModalSubmitHandler = config && typeof config.onSubmit === "function" ? config.onSubmit : null;
         planModalBackdrop.hidden = false;
         planModalName.focus();
@@ -3744,6 +3983,13 @@
         planModalBackdrop.addEventListener("click", function (e) {
           if (e.target === planModalBackdrop) closePlanModal();
         });
+      }
+
+      if (planModalTag) {
+        planModalTag.addEventListener("input", updatePlanModalCharCounts);
+      }
+      if (planModalNote) {
+        planModalNote.addEventListener("input", updatePlanModalCharCounts);
       }
 
       if (planModalForm) {
